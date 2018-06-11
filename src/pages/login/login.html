@@ -1,14 +1,39 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Charity App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list text-align="center">
+
+    <ion-item>
+      <ion-input type="text" placeholder="Username" [(ngModel)]="username"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"> </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-item text-align="center">
+      <button ion-button (click)="login()" color="secondary" round> Sign In </button>
+      <p> </p>
+      OR
+      <p> </p>
+      <button ion-button (click)="navigateToRegister()" color="primary" round> Register </button>
+      <p> </p>
+      OR
+      <p> </p>
+      <button ion-button (click)="navigateToDonations()"color="danger" round> Donate Now </button>
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>
